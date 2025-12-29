@@ -1,4 +1,4 @@
-# This Dockerfile is similar to Dockerfile.bun from the official documentation which is 
+# This Dockerfile is similar to Dockerfile.bun from the official documentation which is
 # specifically configured for projects using Bun
 
 # Use Bun's official image
@@ -33,7 +33,7 @@ WORKDIR /app
 
 ENV NODE_ENV=production \
     PORT=3000 \
-    HOSTNAME="0.0.0.0"
+    HOST=0.0.0.0
 
 RUN groupadd --system --gid 1001 nodejs && \
     useradd --system --uid 1001 --no-log-init -g nodejs nextjs
