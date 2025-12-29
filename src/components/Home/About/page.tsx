@@ -1,5 +1,3 @@
-"use client";
-
 export default function About() {
     return (
         <section id="about-us" className="py-20 px-4 bg-[#0A0F2D]">
