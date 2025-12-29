@@ -1,18 +1,7 @@
-"use client";
+import { nationalEvents, internalEvents } from "@/utils/events";
+import Image from "next/image";
 
 export default function Events() {
-    const nationalEvents = [
-        { title: "Algerian Robot Cup", description: "Annual technology conference", image: "🎯" },
-        { title: "JunctionXAlgiers", description: "Showcase of student projects", image: "💡" },
-        { title: "Django Girl", description: "48-hour coding challenge", image: "💻" },
-    ];
-
-    const internalEvents = [
-        { title: "Workshop Series", description: "Monthly skill-building sessions", image: "🛠️" },
-        { title: "Dishack", description: "Connect with industry professionals", image: "🤝" },
-        { title: "Gaussian Pick", description: "Technical certification courses", image: "📚" },
-    ];
-
     return (
         <section id="events" className="py-20 px-4 bg-[#0A0F2D]">
             <div className="max-w-7xl mx-auto">
@@ -30,8 +19,14 @@ export default function Events() {
                                 key={index}
                                 className="bg-indigo-900/40 backdrop-blur-sm border border-indigo-700/30 rounded-xl overflow-hidden hover:bg-indigo-900/60 transition transform hover:scale-105 hover:shadow-lg group"
                             >
-                                <div className="h-48 bg-linear-to-br from-blue-600/20 to-purple-600/20 flex items-center justify-center text-6xl">
-                                    {event.image}
+                                <div className="h-48 bg-linear-to-br from-blue-600/20 to-purple-600/20 flex items-center justify-center overflow-hidden">
+                                    <Image
+                                        src={event.image}
+                                        alt={event.title}
+                                        width={400}
+                                        height={192}
+                                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                                    />
                                 </div>
                                 <div className="p-6">
                                     <h4 className="text-xl font-bold mb-2 text-white group-hover:text-blue-400 transition">
@@ -53,8 +48,14 @@ export default function Events() {
                                 key={index}
                                 className="bg-indigo-900/40 backdrop-blur-sm border border-indigo-700/30 rounded-xl overflow-hidden hover:bg-indigo-900/60 transition transform hover:scale-105 hover:shadow-lg group"
                             >
-                                <div className="h-48 bg-linear-to-br from-purple-600/20 to-pink-600/20 flex items-center justify-center text-6xl">
-                                    {event.image}
+                                <div className="h-48 bg-linear-to-br from-purple-600/20 to-pink-600/20 flex items-center justify-center overflow-hidden">
+                                    <Image
+                                        src={event.image}
+                                        alt={event.title}
+                                        width={400}
+                                        height={192}
+                                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                                    />
                                 </div>
                                 <div className="p-6">
                                     <h4 className="text-xl font-bold mb-2 text-white group-hover:text-blue-400 transition">
