@@ -49,7 +49,7 @@ export default function TechnologySponsor() {
                                 alt={`${sponsor.name} logo`}
                                 width={160}
                                 height={80}
-                                className="h-10 sm:h-12 md:h-14 lg:h-16 w-auto object-contain grayscale hover:grayscale-0 transition duration-300"
+                                className="h-10 sm:h-12 md:h-14 lg:h-20 w-auto object-contain grayscale hover:grayscale-0 transition duration-300"
                             />
                         </motion.div>
                     ))}
