@@ -3,8 +3,9 @@ export default function About() {
         <section id="about-us" className="py-16 md:py-20 px-4 bg-white">
             <div className="max-w-5xl mx-auto text-center mb-10 md:mb-12">
                 <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4 sm:mb-6">
-                    About CELEC
+                    About <span className="text-transparent bg-clip-text bg-linear-to-r from-gray-900 to-blue-600">CELEC</span>
                 </h2>
+
 
                 <p className="text-gray-600 text-base sm:text-lg mb-4 leading-relaxed">
                     CELEC CLUB was founded in 1984 at USTHB by a group of passionate computer science and electrical engineering students.
