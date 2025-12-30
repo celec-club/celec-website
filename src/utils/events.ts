@@ -24,12 +24,12 @@ export const internalEvents = [
   },
   {
     title: "Dishack",
-    description: "Connect with industry professionals",
+    description: "Discord x CELEC Hackathon",
     image: "/events/dishack.jpg",
   },
   {
     title: "Gaussian Pick",
-    description: "Technical certification courses",
+    description: "Online Discord Hackathon",
     image: "/events/gaussian-pick.jpg",
   },
 ];
