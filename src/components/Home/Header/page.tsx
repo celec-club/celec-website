@@ -2,10 +2,11 @@
 
 import Image from "next/image";
 import { Menu, X, Calendar, Clock, XCircle } from "lucide-react";
-import { navLinks, socialLinks } from "@/utils/links";
+import { navLinks } from "@/utils/links";
 import { useHeader } from "@/hooks/useHeader";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
+import { resumeAndPrerenderToNodeStream } from "react-dom/static";
 
 // Configuration for registration deadline
 const REGISTRATION_DEADLINE = "2026-01-10T23:59:59"; // Set deadline here
@@ -89,20 +90,24 @@ export default function Header() {
         setShowDeadlinePopup(false);
     };
 
+    const registrationWebsite = () => {
+        return "https://registrations.celec.codes"
+    }
+
     const JoinButton = ({ isMobile = false }: { isMobile?: boolean }) => (
         <div className="relative">
             <a
-                href={isRegistrationOpen ? socialLinks.contribute : "#"}
+                href={isRegistrationOpen ? registrationWebsite() : "#"}
                 target={isRegistrationOpen ? "_blank" : undefined}
                 rel={isRegistrationOpen ? "noopener noreferrer" : undefined}
                 onClick={handleJoinClick}
                 onMouseEnter={() => setIsHovering(true)}
                 onMouseLeave={() => setIsHovering(false)}
                 className={`relative rounded-full transition-all duration-300 flex items-center justify-center gap-2 ${isMobile
-                        ? "px-6 py-2 text-base"
-                        : headerShrink
-                            ? "px-5 py-1.5 text-sm"
-                            : "px-6 py-2"
+                    ? "px-6 py-2 text-base"
+                    : headerShrink
+                        ? "px-5 py-1.5 text-sm"
+                        : "px-6 py-2"
                     } ${isRegistrationOpen
                         ? "bg-blue-600 hover:bg-blue-700 text-white cursor-pointer"
                         : "bg-gray-600/50 text-gray-300 cursor-not-allowed"
@@ -214,23 +219,22 @@ export default function Header() {
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.5, ease: "easeOut" }}
             className={`fixed top-0 w-full z-50 transition-all duration-300 ${headerShrink
-                    ? "py-2 backdrop-blur-lg bg-[#0A0F2D]/90 border-b border-blue-900/30"
-                    : "py-3 backdrop-blur-sm bg-[#0A0F2D]/80 border-b border-blue-900/20"
+                ? "py-2 backdrop-blur-lg bg-[#FFFFFF]/90 border-b border-blue-900/30"
+                : "py-3 backdrop-blur-sm bg-[#FFFFFF]/80 border-b border-blue-900/20"
                 }`}
         >
             <div className="max-w-7xl mx-auto px-6">
                 <div className={`flex items-center justify-between transition-all duration-300 ${headerShrink ? "h-16" : "h-14"
                     }`}>
-                    {/* Left: Logo adjusted to the right */}
                     <motion.div
                         initial={{ opacity: 0, x: -20 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.6 }}
-                        className="flex items-center"
+                        className="flex items-center space-x-3"
                     >
                         <a href="#" className="flex items-center">
                             <Image
-                                src="/celec.png"
+                                src="/celec-blue.png"
                                 width={100}
                                 height={64}
                                 alt="CELEC Logo"
@@ -238,16 +242,25 @@ export default function Header() {
                                     }`}
                             />
                         </a>
+
+                        <a href="https://algerietelecom.dz/en">
+                            <Image src="/sponsors/at.png"
+                                width={100}
+                                height={64}
+                                alt="Algerie Telecom logo"
+                                className={`transition-all duration-300 ${headerShrink ? "h-14 w-auto" : "h-16 w-auto"
+                                    }`}
+                            />
+                        </a>
                     </motion.div>
 
-                    {/* Center: Navigation Links (centered) */}
                     <div className="hidden md:flex absolute left-1/2 transform -translate-x-1/2 space-x-8">
                         {navLinks.map((link) => (
                             <a
                                 key={link.name}
                                 href={link.path}
                                 onClick={(e) => handleNavClick(e, link.path, link.name)}
-                                className={`text-white hover:text-blue-400 transition-all duration-200 ${headerShrink ? "text-sm" : "text-base"
+                                className={`text-black hover:text-blue-400 transition-all duration-200 ${headerShrink ? "text-sm" : "text-base"
                                     }`}
                             >
                                 {link.name}
