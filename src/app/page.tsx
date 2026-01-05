@@ -1,10 +1,10 @@
-import About from "@/components/Home/About/page";
-import Events from "@/components/Home/Events/page";
-import Footer from "@/components/Home/Footer/page";
-import Header from "@/components/Home/Header/page";
-import Hero from "@/components/Home/Hero/page";
-import TechnologySponsor from "@/components/Home/TechnologySponsor/page";
-import TrustedBy from "@/components/Home/TrustedBy/page";
+import About from "@/shared/About/page";
+import Events from "@/shared/Events/page";
+import Footer from "@/shared/Footer/page";
+import Header from "@/shared/Header/page";
+import Hero from "@/shared/Hero/page";
+import TechnologySponsor from "@/shared/TechnologySponsor/page";
+import TrustedBy from "@/shared/TrustedBy/page";
 
 export default function Home() {
   return (

@@ -45,7 +45,7 @@ export default function TrustedBy() {
                         {[...topRowSponsors, ...topRowSponsors].map((sponsor, index) => (
                             <div
                                 key={`top-${index}`}
-                                className="flex items-center justify-center min-w-[80px] sm:min-w-[120px] md:min-w-[160px] shrink-0"
+                                className="flex items-center justify-center min-w-20 sm:min-w-30 md:min-w-40 shrink-0"
                             >
                                 <Image
                                     src={sponsor.logo}
@@ -77,7 +77,7 @@ export default function TrustedBy() {
                         {[...bottomRowSponsors, ...bottomRowSponsors].map((sponsor, index) => (
                             <div
                                 key={`bottom-${index}`}
-                                className="flex items-center justify-center min-w-[80px] sm:min-w-[120px] md:min-w-[160px] shrink-0"
+                                className="flex items-center justify-center min-w-20 sm:min-w-30 md:min-w-40 shrink-0"
                             >
                                 <Image
                                     src={sponsor.logo}
