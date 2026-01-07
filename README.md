@@ -1,36 +1,125 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# CELEC Club - Official Website
 
-## Getting Started
+This repository contains the **official website of CELEC Club**.
 
-First, run the development server:
+The website is built using the **Next.js framework** and runs on the **Bun runtime**, with **Docker** and **Nginx** used for production deployment.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+---
+
+## Tech Stack
+
+- **Framework:** Next.js (App Router)
+- **Runtime:** Bun
+- **UI Components:** shadcn/ui
+- **Styling:** Tailwind CSS
+- **Deployment:** Docker + Nginx (VPS)
+
+---
+
+## Project Structure
+
+### Root-Level Files and Folders
+
+```
+├── src/
+├── types/
+├── docker-compose.yml
+├── Dockerfile
+├── nginx.conf
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### `src/` Folder Breakdown
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The `src` directory contains the core application logic:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **app/**
+  Main entry point of the Next.js application (routing, layouts, and pages).
 
-## Learn More
+- **components/**
+  Contains **shadcn/ui components only**.
 
-To learn more about Next.js, take a look at the following resources:
+- **hooks/**
+  Custom React hooks used across the application.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **lib/**
+  shadcn-related utilities and helper functions.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **shared/**
+  Contains all feature- and section-based code.
+  Each website section has its own folder, including:
 
-## Deploy on Vercel
+  - About Us
+  - Events
+  - Header
+  - Hero
+  - Footer
+  - Sponsors
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **utils/**
+  Shared constants and configuration data, such as:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+  - Events
+  - External links
+  - Sponsors data
+
+### `types/` Folder
+
+- Contains global and reusable TypeScript types used throughout the project.
+
+---
+
+## Important Rules ⚠️
+
+### Do **NOT** modify the following files:
+
+- `docker-compose.yml`
+- `Dockerfile`
+- `.dockerignore`
+- `nginx.conf`
+- `next.config.ts`
+
+These files are critical to the **production hosting setup**.
+
+Modifying them and pushing changes to GitHub may cause **deployment failures**, **downtime**, or **server misconfiguration** when the project is cloned or redeployed on the VPS.
+
+---
+
+## VPS & Server Configuration
+
+- Project directory on the VPS:
+
+```
+/var/www/
+```
+
+- Nginx configuration files:
+
+```
+/etc/nginx/sites-available
+```
+
+Ensure you are working in the correct directories when managing the server or deploying updates.
+
+---
+
+## Docker & Nginx Notes
+
+- A **basic understanding of Docker and Nginx** is required before making infrastructure-related changes.
+- Avoid asking AI tools to blindly generate Dockerfiles or Nginx configurations.
+- Understanding how these tools work is essential for validating, debugging, and safely improving the setup.
+
+---
+
+## Contribution Guidelines
+
+- Follow the existing folder structure.
+- Keep shared logic inside the `shared` folder.
+- Do not introduce breaking changes to deployment-related files.
+- Test changes locally before pushing to the repository.
+
+---
+
+If you have questions or need access-related information, please contact the code owner:
+**Yasser Fedsi** - [fedsi.yasser@gmail.com](mailto:fedsi.yasser@gmail.com)
+
+Happy coding !
