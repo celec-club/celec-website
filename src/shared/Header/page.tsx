@@ -186,7 +186,7 @@ export default function Header() {
                             className={`transition-all duration-300 ${headerShrink ? "h-14 w-auto" : "h-16 w-auto"}`}
                         />
                     </a>
-                    <a href="https://algerietelecom.dz/en">
+                    <a href="https://algerietelecom.dz/en" target="_blank">
                         <Image
                             src="/sponsors/at.png"
                             width={100}

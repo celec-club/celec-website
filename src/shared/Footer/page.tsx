@@ -98,7 +98,7 @@ export default function Footer() {
             <ul className="space-y-3 sm:space-y-4">
               <li>
                 <a
-                  href="mailto:contact@celec-club.com"
+                  href="mailto:usthb.celec@gmail.com"
                   className="flex items-center gap-2 group text-xs sm:text-sm transition-colors duration-300 hover:text-pink-600"
                 >
                   <div className="bg-pink-100 p-1.5 rounded-lg group-hover:bg-pink-200 transition-colors">
