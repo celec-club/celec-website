@@ -1,4 +1,6 @@
-export const nationalEvents = [
+import { eventsProps } from "../../types";
+
+export const nationalEvents: eventsProps[] = [
   {
     title: "Algerian Robot Cup",
     description: "Annual Robotics Battle",
@@ -14,22 +16,27 @@ export const nationalEvents = [
     description: "48-hour coding challenge",
     image: "/events/django-girls.png",
   },
+  {
+    title: "C-Tech",
+    description: "CELEC Technology Conference",
+    image: "/events",
+  },
 ];
 
-export const internalEvents = [
+export const internalEvents: eventsProps[] = [
   {
     title: "Workshop Series",
     description: "Monthly skill-building sessions",
-    image: "/events/workshop.jpg",
+    image: "/events/",
   },
   {
     title: "Dishack",
     description: "Discord x CELEC Hackathon",
-    image: "/events/dishack.jpg",
+    image: "/events/",
   },
   {
     title: "Gaussian Pick",
     description: "Online Discord Hackathon",
-    image: "/events/gaussian-pick.jpg",
+    image: "/events/",
   },
 ];

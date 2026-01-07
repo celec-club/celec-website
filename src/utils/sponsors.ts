@@ -1,7 +1,4 @@
-interface SProps {
-  name: string;
-  logo: string;
-}
+import { SProps } from "../../types";
 
 export const technologySponsor: SProps[] = [
   {

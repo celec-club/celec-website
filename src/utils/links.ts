@@ -1,10 +1,4 @@
-import { Github, Instagram, Linkedin } from "lucide-react";
-
-// Props
-interface Links {
-  name: string;
-  path: string;
-}
+import { Links } from "../../types";
 
 export const navLinks: Links[] = [
   { name: "Home", path: "/" },
