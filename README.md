@@ -26,6 +26,8 @@ The website is built using the **Next.js framework** and runs on the **Bun runti
 ├── docker-compose.yml
 ├── Dockerfile
 ├── nginx.conf
+├── next.config.ts
+├── tsconfig.json
 ```
 
 ### `src/` Folder Breakdown
@@ -68,7 +70,7 @@ The `src` directory contains the core application logic:
 
 ---
 
-## Important Rules ⚠️
+## ⚠️ Important Rules ⚠️
 
 ### Do **NOT** modify the following files:
 
