@@ -1,46 +1,8 @@
-import { Github, Instagram, Linkedin, Mail, MapPin } from "lucide-react";
+import FooterSection from "../components/FooterSection";
+import { SOCIAL_LINKS, EVENTS, QUICK_LINKS } from ".";
+import FooterLink from "../components/FooterLink";
 import { Button } from "@/components/ui/button";
-
-const SOCIAL_LINKS = [
-  { href: "https://github.com/celec-club/", icon: Github, label: "GitHub" },
-  { href: "https://www.linkedin.com/company/celecusthb/", icon: Linkedin, label: "LinkedIn" },
-  { href: "https://instagram.com/celec_usthb", icon: Instagram, label: "Instagram" },
-];
-
-const QUICK_LINKS = [
-  { href: "#home", label: "Home" },
-  { href: "#faq", label: "FAQ" },
-  { href: "#blog", label: "Blog" },
-  { href: "#events", label: "Events" },
-];
-
-const EVENTS = ["Algerian Robot Cup", "JunctionXAlgiers", "Gaussian Pick", "Dishack"];
-
-const FooterSection = ({ title, color, children }: { title: string; color: string; children: React.ReactNode }) => (
-  <div>
-    <h4 className="font-bold mb-3 sm:mb-4 text-gray-900 flex items-center gap-2">
-      <span className={`w-2 h-2 rounded-full`} style={{ backgroundColor: color }} />
-      {title}
-    </h4>
-    {children}
-  </div>
-);
-
-const FooterLink = ({ href, label, color }: { href: string; label: string; color?: string }) => (
-  <li>
-    <a
-      href={href}
-      className={`flex items-center group text-xs sm:text-sm transition-all duration-300 hover:pl-2 ${color ? `hover:text-[${color}]` : "hover:text-blue-600"
-        }`}
-    >
-      <span
-        className={`w-1.5 h-1.5 rounded-full mr-2 opacity-0 group-hover:opacity-100`}
-        style={{ backgroundColor: color || "#3b82f6" }}
-      />
-      {label}
-    </a>
-  </li>
-);
+import { Mail, MapPin } from "lucide-react"
 
 export default function Footer() {
   return (
@@ -48,7 +10,6 @@ export default function Footer() {
       <div className="absolute top-0 left-0 right-0 h-1" />
 
       <div className="max-w-7xl mx-auto px-4 flex flex-col lg:flex-row justify-between gap-12">
-        {/* Brand */}
         <div className="flex flex-col sm:flex-row items-center lg:items-start gap-4 sm:gap-6 text-center lg:text-left">
           <div>
             <h3 className="text-3xl font-bold tracking-tight py-3 text-transparent bg-clip-text bg-linear-to-r from-gray-900 to-blue-600">
@@ -76,7 +37,6 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Links */}
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 md:gap-8 text-sm text-gray-600">
           <FooterSection title="Quick Links" color="#3b82f6">
             <ul className="space-y-2 sm:space-y-3">
@@ -120,7 +80,6 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Bottom bar */}
       <div className="mt-10 border-t border-gray-200 pt-6">
         <div className="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row justify-between items-center gap-2 sm:gap-3 text-gray-500 text-xs sm:text-sm">
           <p className="uppercase tracking-wider">
