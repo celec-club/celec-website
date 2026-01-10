@@ -13,7 +13,7 @@ export default function About() {
 
                 <p className="text-gray-600 text-base sm:text-lg mb-4 leading-relaxed text-left">
                     CELEC is an Algerian scientific club based in the faculty of electronics and computer engineering at USTHB and has been running since 1984.
-                    We believe in the importance of promot-ing electronics throughout the student community and the necessity to help them develop and improve their skills.
+                    We believe in the importance of promoting electronics throughout the student community and the necessity to help them develop and improve their skills.
                 </p>
 
                 <p className="text-gray-600 text-base sm:text-lg leading-relaxed text-left">
