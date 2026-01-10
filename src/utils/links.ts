@@ -5,6 +5,6 @@ export const navLinks: Links[] = [
   { name: "About Us", path: "#about-us" },
   { name: "Events", path: "#events" },
   { name: "Sponsors", path: "#sponsors" },
-  { name: "Faq", path: "#faq" },
+  // { name: "Faq", path: "#faq" },
   // { name: "Blog", path: "/blog" },
 ];
