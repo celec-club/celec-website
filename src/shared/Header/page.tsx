@@ -8,7 +8,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 
 // Configuration for registration deadline
-const REGISTRATION_DEADLINE = "2026-02-28T23:59:59";
+const REGISTRATION_DEADLINE = "2026-02-18T23:59:59";
 const TIME_ZONE = "Africa/Algiers";
 
 export default function Header() {
