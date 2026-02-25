@@ -49,8 +49,8 @@ export const internalEvents: eventsProps[] = [
   },
   {
     title: "Dishack",
-    description: "Discord x CELEC Hackathon",
-    image: "/events/internal/",
+    description: "Discord x CELEC Community Hackathon",
+    image: "/events/internal/dishack_banner.png",
   },
   {
     title: "Gaussian Pick",
