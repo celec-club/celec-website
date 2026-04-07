@@ -1,5 +1,6 @@
 import About from "@/shared/About/page";
 import Events from "@/shared/Events/page";
+import Faq from "@/shared/Faq/page";
 import Footer from "@/shared/Footer/page";
 import Header from "@/shared/Header/page";
 import Hero from "@/shared/Hero/page";
@@ -15,6 +16,7 @@ export default function Home() {
       <Events />
       <TechnologySponsor />
       <TrustedBy />
+      <Faq />
       <Footer />
     </>
   );
